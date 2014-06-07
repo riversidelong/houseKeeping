@@ -23,8 +23,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    NSData *now = [NSData date];
+    //注意
+    NSDate *now = [NSDate date];
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     self.calendar = calendar;
@@ -92,12 +92,7 @@
     return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -207,7 +202,7 @@
     NSInteger expense = 0;
     for (Item *item in results)
     {
-        expense += [Item.expense integerValue];
+        expense += [item.expense integerValue];
         
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%d/%d", (int)year, (int)month];

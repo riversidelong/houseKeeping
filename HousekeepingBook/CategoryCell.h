@@ -1,0 +1,15 @@
+//
+//  CategoryCell.h
+//  HousekeepingBook
+//
+//  Created by 川端伸彦 on 2014/06/05.
+//  Copyright (c) 2014年 mikke. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class ItemCategory;
+
+@interface CategoryCell : UITableViewCell
+@property(strong, nonatomic)ItemCategory *itemCategory;
+@end
